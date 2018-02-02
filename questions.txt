@@ -1,0 +1,14 @@
+Se conoce como una instancia de una clase.
+objeto
+
+Es una forma de reutilizar código en la programación orientada a objetos
+herencia
+
+Tipo de datos en donde cada valor está asociado a una llave de cualquier tipo.
+hash
+
+El metodo contructor se define con el nombre de:
+initialize
+
+Los modulos se definen con el nombre de:
+module
