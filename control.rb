@@ -3,27 +3,23 @@ require "./class.rb"
 ques = Question.new('questions.txt')
 pre = ques.questions
 
-puts "Bienvenido a reto 5, Para jugar, solo ingresa el termino
-correcto para cada una de las definiciones, Listo? Vamos!"
-puts
+message = View.new
+message.greeting
 
 while pre.empty? == false
-  puts "Pregunta:"
+  message.preg
   puts  pre[0].values
   res = pre[1].values.join("\n")
-  print "Respuesta: "
+  message.resp
   answer = gets
 
-  if res == answer
+  if res == answer.downcase
     pre.delete_at(0)
     pre.delete_at(0)
-    puts "\nMuy Bien!!!"
-    puts
+    message.ok
   else
-    puts
-    puts "No es correcto, intenta de nuevo!"
-    puts
+    message.no_ok
   end
 end
 
-puts "Felicitaciones!!! GANASTE el Reto5!"
+message.winer
