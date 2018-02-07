@@ -6,20 +6,25 @@ pre = ques.questions
 message = View.new
 message.greeting
 
-while pre.empty? == false
-  message.preg
-  puts  pre[0].values
-  res = pre[1].values.join("\n")
-  message.resp
-  answer = gets
+start = Game.new
 
-  if res == answer.downcase
-    pre.delete_at(0)
-    pre.delete_at(0)
-    message.ok
-  else
-    message.no_ok
+if start.res.downcase == "s"
+  while pre.empty? == false
+    message.preg
+    puts  pre[0].values
+    res = pre[1].values.join("\n")
+    message.resp
+    answer = gets
+
+    if res == answer.downcase
+      pre.delete_at(0)
+      pre.delete_at(0)
+      message.ok
+    else
+      message.no_ok
+    end
   end
+  message.winer
+else
+  puts "En otra ocasión sera!"
 end
-
-message.winer

@@ -30,7 +30,7 @@ para cada una de las definiciones, Listo? Vamos!"
   end
 
   def preg
-    puts "Pregunta:"
+    puts "\nPregunta:"
   end
 
   def resp
@@ -38,7 +38,7 @@ para cada una de las definiciones, Listo? Vamos!"
   end
 
   def ok
-    puts "\nMuy Bien!!!"
+    puts "\nMUY BIEN!!!"
     puts
   end
 
@@ -49,6 +49,20 @@ para cada una de las definiciones, Listo? Vamos!"
   end
 
   def winer
-    puts "Felicitaciones!!! GANASTE el Reto5!"
+    puts "FELICITACIONES!!! GANASTE el Reto5!"
   end
+end
+
+class Game
+  attr_accessor :res
+
+  def initialize
+    @res = res
+    validation
+  end
+  def validation
+    puts "(S) si quieres jugar, (N) si no quieres jugar"
+    @res = gets.chomp
+  end
+
 end
